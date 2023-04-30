@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.mf-cursor {
+    color: #45f882;
+}
+
+html body {
+    width: 100vw;
+    height: auto;
+}
+
+header {
+    width: 100vw;
+    min-height: 100vh;
+    background: url(./images/header_bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.burger_menu2 {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav img {
+    width: 177px;
+    height: 40px;
+}
+
+.ul1 {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ul1 a {
+    font-size: 17px;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+.ul1 a::before {
+    content: '';
+    width: 42px;
+    height: 1px;
+    background-color: #45f882;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transition: transform 0.3s ease;
+}
+
+.ul1 a:hover {
+    color: #45f882;
+}
+
+.ul1 a:hover::before {
+    opacity: 1;
+    transform: rotate(-40deg);
+}
+
+.ul2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-magnifying-glass {
+    color: #fff;
+    font-size: 17px;
+    transform: rotate(10deg);
+}
+
+.signin {
+    width: 165px;
+    height: 50px;
+    background: url(images/border.svg) no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 25px;
+    border: none;
+}
+
+.fa-pen-to-square {
+    margin-right: 8px;
+}
