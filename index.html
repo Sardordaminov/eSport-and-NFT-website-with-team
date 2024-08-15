@@ -16,8 +16,9 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class=" header">
         <header>
+        <div class="container nav">
             <nav>
                 <img src="images/logo.png" alt="logo">
                 <ul class="ul1">
@@ -30,7 +31,10 @@
                 </ul>
                 <ul class="ul2">
                     <i class="fa-sharp fa-light fa-magnifying-glass"></i>
-                    <button class="signin"><i class="fa-regular fa-pen-to-square"></i>-SIGN IN</button>
+                    <div class="signin">
+                        <span><i class="fa-regular fa-pen-to-square"></i>-sign in</span>
+                        <svg width='157' height='48' viewBox='0 0 157 48' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0_1_14)'><path fill-rule='evenodd' clip-rule='evenodd' d='M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z' fill='#45F882'/><path fill-rule='evenodd' clip-rule='evenodd' d='M25 1L1 24.5111L25 47L8 23.4889L25 1Z' fill='#45F882'/><path fill-rule='evenodd' clip-rule='evenodd' d='M24.75 1L0.75 25L23.75 47H131.75L155.75 25L131.75 1H24.75Z' stroke='#45F882' stroke-width='1.5'/></g><defs><clipPath id='clip0_1_14'><rect width='156.5' height='47.5' fill='white'/></clipPath></defs></svg>
+                    </div>
                     <div class="burger_menu1">
                         <div class="burger_menu1_item a"></div>
                         <div class="burger_menu1_item"></div>
@@ -39,48 +43,39 @@
                 </ul>
                 <div class="burger_menu2"></div>
             </nav>
+        </div>
         </header>
+
+
+<section class=" steaming container">
+    <div class="live">
+        <h4>live gaming</h4>
+        <h1>steaming</h1>
+        <h3>video games online</h3>
+        <span>contact us</span>
+        <svg preserveAspectRatio="none" viewBox="0 0 197 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="cls-1" fill-rule="evenodd" clip-rule="evenodd"
+                d="M30.976 0.755987L0.75499 30.977L29.717 58.677H165.717L195.938 30.977L165.717 0.755987H30.976Z" stroke="white"
+                stroke-width="1.5"></path>
+            <path class="cls-2" fill-rule="evenodd" clip-rule="evenodd"
+                d="M166.712 2.01899L196.933 30.98L166.712 58.68L188.118 29.719L166.712 2.01899Z" fill="white"></path>
+            <path class="cls-2" fill-rule="evenodd" clip-rule="evenodd"
+                d="M30.235 2.01899L0.0139923 30.977L30.235 58.677L8.82899 29.719L30.235 2.01899Z" fill="white"></path>
+        </svg>
+        <div class="live__img">
+            <img src="/images/header_button_darkzone.png" alt="header_button_darkzone">
+            <img src="images/header_button_nextgen.png" alt="header_button_nextgen">
+            <img src="images/header_button_tanupo.png" alt="header_button_tanupo">
+        </div>
     </div>
-    <script>
-        const cursor = new MouseFollower({
-            el: null,
-            container: document.body,
-            className: 'mf-cursor',
-            innerClassName: 'mf-cursor-inner',
-            textClassName: 'mf-cursor-text',
-            mediaClassName: 'mf-cursor-media',
-            mediaBoxClassName: 'mf-cursor-media-box',
-            iconSvgClassName: 'mf-svgsprite',
-            iconSvgNamePrefix: '-',
-            iconSvgSrc: '',
-            dataAttr: 'cursor',
-            hiddenState: '-hidden',
-            textState: '-text',
-            iconState: '-icon',
-            activeState: '-active',
-            mediaState: '-media',
-            stateDetection: {
-                '-pointer': 'a,button',
-                '-hidden': 'iframe'
-            },
-            visible: true,
-            visibleOnState: false,
-            speed: 1,
-            ease: 'expo.out',
-            overwrite: true,
-            skewing: 0,
-            skewingText: 2,
-            skewingIcon: 2,
-            skewingMedia: 2,
-            skewingDelta: 0.001,
-            skewingDeltaMax: 0.15,
-            stickDelta: 0.15,
-            showTimeout: 20,
-            hideOnLeave: true,
-            hideTimeout: 300,
-            hideMediaTimeout: 300,
-        });
-    </script>
+    <div class="movepic">
+        <img src="/images/home-img.png" alt="home img" id="movable-image">
+    </div>
+</section>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

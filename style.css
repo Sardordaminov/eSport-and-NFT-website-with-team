@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +7,50 @@
     list-style: none;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-family: 'Poppins';
 }
+
+img {
+    max-width: 100%;}
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+    width: 8px; /* Scrollbar kengligi */
+    background-color: #0f161b;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: none; /* Trackning rangi */
+    border-radius: 10px; /* Burchaklarni yumaloqlash */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #1de660; /* Thumb (scrolling element) rangi */
+    border-radius: 10px; /* Burchaklarni yumaloqlash */
+    border: none; /* Thumb atrofidagi bo'shliq */
+}
+
+::selection {
+    background: #45f882 ; /* Background color of the selected text */
+    color: #000000; /* Text color of the selected text */
+}
+
+
 
 .mf-cursor {
     color: #45f882;
 }
 
-html body {
-    width: 100vw;
-    height: auto;
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+
 }
 
-header {
-    width: 100vw;
+
+.header {
     min-height: 100vh;
     background: url(./images/header_bg.jpg) no-repeat;
     background-size: cover;
@@ -29,12 +60,20 @@ header {
     display: none;
 }
 
-nav {
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
     width: 100%;
-    min-height: 120px;
+    z-index: 33333;
+}
+
+nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 100px;
 }
 
 nav img {
@@ -43,7 +82,7 @@ nav img {
 }
 
 .ul1 {
-    width: 30%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,10 +90,11 @@ nav img {
 
 .ul1 a {
     font-size: 17px;
-    font-family: 'Barlow', sans-serif;
     color: #fff;
     font-weight: bold;
     position: relative;
+    letter-spacing: 0.8px;
+    padding: 25px 0;
 }
 
 .ul1 a::before {
@@ -65,7 +105,9 @@ nav img {
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     transition: transform 0.3s ease;
 }
 
@@ -80,7 +122,7 @@ nav img {
 
 .ul2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -96,17 +138,52 @@ nav img {
 }
 
 .signin {
-    width: 165px;
-    height: 50px;
-    background: url(images/border.svg) no-repeat;
-    background-size: cover;
     font-size: 16px;
     font-weight: bold;
     font-family: 'Barlow', sans-serif;
     color: #fff;
     cursor: pointer;
-    margin: 0 25px;
+    margin: 0 50px;
     border: none;
+}
+
+.signin span {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.signin span i {
+    transition: color ease; /* i elementi uchun ham transition qo'shildi */
+}
+
+.signin svg {
+    position: absolute;
+    top: 26px;
+    right: 185px;
+    width: 157px;
+    height: 48px;
+    z-index: 0;  
+    fill: #00000000;
+    transition: fill;  
+}
+
+.signin:hover span {
+    color: black;
+}
+
+.signin svg:hover {
+    fill: #45f882;
+}
+
+.signin span:hover ~ svg {
+    fill: #45f882; /* Span elementiga hover qilinganda svg rangi o'zgaradi */
 }
 
 .fa-pen-to-square {
@@ -120,6 +197,7 @@ nav img {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    margin-left: 20px;
 }
 .burger_menu1:hover .burger_menu1_item.a{
     width: 45px;
@@ -142,4 +220,126 @@ nav img {
     width: 25px;
     position: relative;
     left: 20px;
+}
+
+/* section steaming */
+
+.steaming {
+    display: flex;
+    justify-content: space-around;
+}
+
+.live {
+    position: relative;
+    margin-top: 250px;
+}
+
+.live h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 17px 0 17px 20px;
+    color: #45f882;
+    background: linear-gradient(90deg, rgba(51, 199, 51, 0.267), rgba(0, 153, 0, 0));
+    border-radius: 10px;
+    line-height: 1;
+    letter-spacing: 4px;
+    margin: 0 0 19px;
+    width: 250px;
+}
+
+.live h1 {
+    font-size: 118px;
+    text-transform: uppercase;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: #fff;
+    position: relative;
+    text-shadow: -1px 5px 0px rgba(69, 248, 130, 0.66);
+    margin-bottom: 20px;
+}    
+
+.live h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.live svg {
+    position: absolute;
+    width: 157px;
+    height: 48px;
+    left: 0px;
+    top: 293px;
+    z-index: 1;  
+    fill: #45f882;
+    stroke: #fff;
+    cursor: pointer;
+    transition: fill;
+}
+
+.live svg:hover {
+    fill: #fff;
+}
+
+.live span {
+    position: relative;
+    font-size: 15px;
+    color: #201f2a;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 28px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.live span:hover ~ svg {
+    fill: #fff;
+}
+
+.steaming img {
+    transform: translate3d(0px, 0px, 0px);
+    margin: 150px auto;
+}
+
+.live__img {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+.live__img img {
+    margin: 200px 20px 0 0;
+    padding: auto;
+    cursor: pointer;
+}
+
+.live__img img:hover {
+    opacity: 1;
+}
+
+
+
+
+
+.steaming::before  {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background-color: #45f882;
+    height: 50px;
+}
+
+.steaming::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background-color: #45f882;
+    height: 50px;
 }
